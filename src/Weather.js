@@ -58,7 +58,7 @@ export default function Weather() {
             </form>
             <div className="row">
               <div className="col box weather-temperature">
-                <img src={weatherData.imgUrl} id="icon" />
+                <img src={weatherData.imgUrl} id="icon" alt="Weather Icon" />
                 <span className="daily-temp" id="temp">
                   {weatherData.temperature}
                 </span>
