@@ -1,0 +1,125 @@
+body {
+  background-color: #fafafa;
+}
+.container {
+  display: block;
+  margin: 0 auto;
+}
+.card {
+  margin: 0 auto;
+}
+.card-body {
+  padding-right: 0;
+
+  background: radial-gradient(
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.6) 0%,
+    rgb(160, 199, 254) 74.6%
+  );
+}
+#search-city {
+  width: 387px;
+  margin-bottom: 30px;
+}
+#search-city:hover {
+  outline: none;
+}
+#search-button {
+  background-color: lightgray;
+  margin-right: 10px;
+  border-color: #000;
+}
+#location-button {
+  margin-left: -14px;
+}
+.col-3 {
+  width: 14%;
+}
+h1 {
+  color: #2d4059;
+  width: 355px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  text-align: end;
+  font-size: 40px;
+  padding-top: 25px;
+}
+p {
+  line-height: 0px;
+  font-family: "Archivo", sans-serif;
+  font-size: 17px;
+}
+hr {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-1 {
+  max-width: 211px;
+}
+.daily-temp {
+  font-size: 65px;
+
+  font-family: "Noto Sans JP", sans-serif;
+}
+.degrees {
+  color: #393e46;
+  position: relative;
+  font-size: 16px;
+  top: -38px;
+}
+.date {
+  padding: 12px 11px 6px 0px;
+  text-align: end;
+  font-size: 20px;
+}
+.temp-sky {
+  color: #132743;
+  font-size: 20px;
+  text-align: end;
+  padding-right: 7px;
+}
+.weather-temperature .active {
+  color: #000;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+#icon {
+  vertical-align: top;
+  padding-top: 15px;
+}
+.box-2 {
+  padding-left: 247px;
+  padding-top: 15px;
+}
+#daily-percent {
+  margin-top: 0 auto;
+  font-size: 15px;
+  padding: 0;
+  list-style: none;
+  font-family: "Archivo", sans-serif;
+  line-height: 1;
+}
+.weather-report {
+  text-align: center;
+  margin-top: 4px;
+}
+.w-emoji {
+  font-size: 30px;
+}
+#celsius,
+#fahrenheit {
+  text-decoration: none;
+}
+#contact {
+  text-align: center;
+  margin-top: 20px;
+}
+input:focus {
+  outline: none !important;
+}
+.weather-forecast-temperature-max {
+  font-weight: bold;
+}

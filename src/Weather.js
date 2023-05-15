@@ -1,45 +1,103 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+import "./Weather.css";
 
 export default function Weather() {
-  let [city, citySearch] = useState("");
-  let [forecast, showForecast] = useState("");
-
-  function setTemperature(response) {
-    showForecast(
-      <div>
-        <ul>
-          <li>Temperature: {Math.round(response.data.main.temp)}°F</li>
-          <li>Description:{response.data.weather[0].description}</li>
-          <li>Humidity:{response.data.main.humidity}%</li>
-          <li>Wind:{response.data.wind.speed} m/s</li>
-          <li>
-            <img
-              src={`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`}
-              alt="Weather Forecast"
-            />
-          </li>
-        </ul>
-      </div>
-    );
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    let apiKey = `64469ac67e6dc941feb5b50915a18dc7`;
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-    axios.get(url).then(setTemperature);
-  }
-
-  function searchCity(event) {
-    citySearch(event.target.value);
-  }
+  let weatherData = {
+    city: "Los Angeles",
+    temperature: 70,
+    date: "Tuesday 10:00",
+    description: "Sunny",
+    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+    humidity: 50,
+    wind: 10,
+  };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Type a city" onChange={searchCity} />
-      <input type="submit" value="search" />
-      <h2> {forecast} </h2>
-    </form>
+    <div className="Weather">
+      <div className="container c1">
+        <div
+          className="card"
+          style={{
+            width: "48rem",
+            display: "block",
+            margin: "auto",
+            marginTop: "10%",
+          }}
+        >
+          <div className="card-body">
+            <form id="search-form">
+              <div className="row">
+                <div className="col-6">
+                  <input
+                    type="search"
+                    className="form-control"
+                    placeholder="enter a city"
+                    id="search-city"
+                    autoComplete="off"
+                    autoFocus="off"
+                    style={{ boxShadow: "none" }}
+                  />
+                </div>
+
+                <div className="col-2">
+                  <input
+                    id="search-button"
+                    className="btn btn-primary me-3"
+                    type="submit"
+                    value="🔎 "
+                  />
+                  <button
+                    type="button"
+                    id="location-button"
+                    className="btn btn-outline-secondary"
+                  >
+                    📍
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div className="row">
+              <div className="col box weather-temperature">
+                <img src={weatherData.imgUrl} id="icon" />
+                <span className="daily-temp" id="temp">
+                  {weatherData.temperature}
+                </span>
+                <span className="degrees"> °F </span>
+
+                <ul id="daily-percent">
+                  <li>
+                    🌀 Wind <span id="wind"></span> {weatherData.wind} mph
+                  </li>
+                  <li>
+                    🌡️💧Humidity{" "}
+                    <span id="humidity">{weatherData.humidity}</span> %
+                  </li>
+                </ul>
+              </div>
+
+              <div className="col box">
+                <h1>{weatherData.city}</h1>
+                <p className="date">{weatherData.date}</p>
+                <p className="temp-sky">{weatherData.description}</p>
+              </div>
+              <hr style={{ width: "90%" }} />
+              <div className="row weather-report" id="forecast"></div>
+            </div>
+          </div>
+        </div>
+
+        <p id="contact">
+          <small>
+            <a
+              href="https://github.com/bcross2425/cross-weather-app"
+              target="blank"
+            >
+              Open-source code
+            </a>
+            by Brittany Cross
+          </small>
+        </p>
+      </div>
+    </div>
   );
 }
