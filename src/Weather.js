@@ -94,7 +94,7 @@ export default function Weather() {
             >
               Open-source code
             </a>
-            by Brittany Cross
+            &nbsp; by Brittany Cross
           </small>
         </p>
       </div>
