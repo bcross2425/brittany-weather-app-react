@@ -89,7 +89,7 @@ export default function Weather() {
         <p id="contact">
           <small>
             <a
-              href="https://github.com/bcross2425/cross-weather-app"
+              href="https://github.com/bcross2425/brittany-weather-app-react"
               target="blank"
             >
               Open-source code
