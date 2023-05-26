@@ -6,12 +6,13 @@ export default function WeatherInfo(props) {
   return (
     <div className="row">
       <div className="col box weather-temperature">
-        <WeatherIcon code={props.data.icon} size={70} />
-
-        <span className="daily-temp" id="temp">
-          {Math.round(props.data.temperature)}
-        </span>
-        <span className="degrees"> °F </span>
+        <div class="d-flex align-items-center">
+          <WeatherIcon code={props.data.icon} size={70} />
+          <span className="daily-temp" id="temp">
+            {Math.round(props.data.temperature)}
+          </span>
+          <span className="degrees"> °F </span>
+        </div>
 
         <ul id="daily-percent">
           <li>
