@@ -31,7 +31,7 @@ export default function WeatherInfo(props) {
         </p>
         <p className="temp-sky text-capitalize">{props.data.description}</p>
       </div>
-      <hr style={{ width: "90%" }} />
+      <hr />
       <div className="row weather-report" id="forecast"></div>
     </div>
   );
