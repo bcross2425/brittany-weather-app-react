@@ -69,13 +69,6 @@ export default function Weather(props) {
                       type="submit"
                       value="🔎 "
                     />
-                    <button
-                      type="button"
-                      id="location-button"
-                      className="btn btn-outline-secondary"
-                    >
-                      📍
-                    </button>
                   </div>
                 </div>
               </form>
